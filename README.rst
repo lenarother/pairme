@@ -2,7 +2,9 @@
 pairme
 ======
 
+
 Facilitate mob programming
+
   * pull random pairs (each person appears 2 times, once as a driver and once as a navigator)
   * reminds to change pair after some time interval (default 15 minutes)
 
@@ -17,6 +19,12 @@ Usage
     $ cd pairme
     $ python -m venv venv
     $ pip install -r requirements_dev.txt
+
+    $ Configure mob session
+    $ src/pairme/cli.py --mobteam John,Jane,Bob
+    $ src/pairme/cli.py --mobtime 600
+
+    $ Start mob session
     $ src/pairme/cli.py
 
 
