@@ -16,6 +16,7 @@ def make_sound(*args):
 
 
 def run_mob(pairs, time_interval):
+    pairs.reverse()
     while pairs:
         pair = pairs.pop()
         message_change = "Times up, change pair!"
