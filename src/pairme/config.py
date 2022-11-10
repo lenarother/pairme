@@ -5,7 +5,10 @@ MOB_CONFIG_FILE = '.mobconfig'
 
 def set_config_value(name, value):
     config = configparser.ConfigParser()
-    config.add_section('mob')
+    config.read(f"{MOB_CONFIG_FILE}")
+
+    if 'mob' not in config.sections():
+        config.add_section('mob')
     config.set('mob', name, value)
 
     with open(rf"{MOB_CONFIG_FILE}", 'w') as configfile:
@@ -17,7 +20,7 @@ def set_team(members_list):
 
 
 def set_time(seconds):
-    set_config_value('time', seconds)
+    set_config_value('time', str(seconds))
 
 
 def get_config_value(name):
@@ -36,6 +39,6 @@ def get_team():
 
 def get_time():
     try:
-        return get_config_value("time")
+        return int(get_config_value("time"))
     except KeyError:
         return 15 * 60
