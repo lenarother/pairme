@@ -8,7 +8,7 @@ import click
 
 def make_sound(*args):
     system = platform.platform().lower()
-    if system.startswith('macos'):
+    if system.startswith("macos"):
         for message in args:
             os.system(f"say {message}")
     else:
@@ -29,5 +29,3 @@ def run_mob(pairs, time_interval):
         make_sound(message_change, message_pair)
 
         time.sleep(time_interval)
-
-

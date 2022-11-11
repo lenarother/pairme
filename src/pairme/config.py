@@ -1,26 +1,26 @@
 import configparser
 
-MOB_CONFIG_FILE = '.mobconfig'
+MOB_CONFIG_FILE = ".mobconfig"
 
 
 def set_config_value(name, value):
     config = configparser.ConfigParser()
     config.read(f"{MOB_CONFIG_FILE}")
 
-    if 'mob' not in config.sections():
-        config.add_section('mob')
-    config.set('mob', name, value)
+    if "mob" not in config.sections():
+        config.add_section("mob")
+    config.set("mob", name, value)
 
-    with open(rf"{MOB_CONFIG_FILE}", 'w') as configfile:
+    with open(rf"{MOB_CONFIG_FILE}", "w") as configfile:
         config.write(configfile)
 
 
 def set_team(members_list):
-    set_config_value('team', members_list)
+    set_config_value("team", members_list)
 
 
 def set_time(seconds):
-    set_config_value('time', str(seconds))
+    set_config_value("time", str(seconds))
 
 
 def get_config_value(name):
@@ -32,9 +32,9 @@ def get_config_value(name):
 def get_team():
     try:
         team = get_config_value("team")
-        return [i.strip() for i in team.split(',')]
+        return [i.strip() for i in team.split(",")]
     except KeyError:
-        raise LookupError('No team configured, run: cli.py mobteam Jon,Jane,Ben...')
+        raise LookupError("No team configured, run: cli.py mobteam Jon,Jane,Ben...")
 
 
 def get_time():

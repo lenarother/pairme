@@ -11,8 +11,8 @@ from src.pairme.config import get_team, set_team, set_time, get_time
 
 
 @click.command()
-@click.option('--mobteam', type=str, help='Team members e.g. Bob,Jane,Jon')
-@click.option('--mobtime', type=int, help='Time for one mob pair.')
+@click.option("--mobteam", type=str, help="Team members e.g. Bob,Jane,Jon")
+@click.option("--mobtime", type=int, help="Time for one mob pair.")
 def main(mobteam=None, mobtime=None):
     if mobteam:
         set_team(mobteam)
