@@ -5,8 +5,8 @@ pairme
 
 Facilitate mob programming
 
-  * pull random pairs (each person appears 2 times, once as a driver and once as a navigator)
-  * reminds to change pair after some time interval (default 15 minutes)
+* pull random pairs (each person appears 2 times, once as a driver and once as a navigator)
+* reminds to change pair after some time interval (default 15 minutes)
 
 
 Usage
@@ -26,6 +26,17 @@ Usage
 
     $ Start mob session
     $ src/pairme/cli.py
+
+
+TODO
+----
+
+* test properly
+* proper config path handling
+* move README.rst to md
+* option to just draw pairs
+* sound config
+* make command line tool (like e.g. black)
 
 
 Credits
