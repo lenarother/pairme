@@ -106,4 +106,4 @@ ENV/
 .idea/
 
 # pairme
-.mobconfig
+.pairme.conf
