@@ -5,8 +5,8 @@
 import sys
 import click
 
-from src.pairme.pairs import pull_pairs
-from src.pairme.mob import run_mob
+from src.pairme.pair import pull_pairs
+from src.pairme.session import run_mob
 from src.pairme.config import get_team, set_team, set_time, get_time
 
 

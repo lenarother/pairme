@@ -2,7 +2,7 @@
 from string import ascii_uppercase
 import pytest
 
-from src.pairme.pairs import pull_pairs
+from src.pairme.pair import pull_pairs
 
 TEAM_ODD = ["Jane", "John", "Jack"]
 TEAM_EVEN = ["Anne", "Ben", "Chuck", "Dorothy"]
