@@ -50,3 +50,11 @@ def get_team():
 
 def get_time():
     return int(get_config_value("time", fallback=15 * 60))
+
+
+def get_break_frequency():
+    return int(get_config_value("break_frequency", fallback=2))
+
+
+def get_break_duration():
+    return int(get_config_value("break_duration", fallback=5 * 60))
